@@ -1,0 +1,11 @@
+{
+    "powers": [
+        "origins":"hydrophobia",
+        "origins":"
+    ],
+    "icon": "minecraft:awkward_potion",
+    "order": 3,
+    "impact": 2
+    "name: "Alchemist",
+    "description": "A Witches Origins", 
+}

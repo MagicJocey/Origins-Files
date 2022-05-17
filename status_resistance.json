@@ -1,0 +1,65 @@
+{
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 20,
+    "effects": {
+    "type": "origins:multiple",
+    "nondamage": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "rising_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:regeneration",
+                "amplifier": 1,
+                "duration": 300
+            }
+        },
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:slowness"
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:weakness"
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:nausea"
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:slowness"
+                }
+            ]
+        }
+    },
+    "damage": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "magic"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.25
+        },
+        "self_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:regeneration",
+                "amplifier": 1,
+                "duration": 300
+            }
+        }
+    }
+}
+
+     
+    
+
+}
